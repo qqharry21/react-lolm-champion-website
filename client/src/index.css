@@ -1,0 +1,48 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f1f5f8;
+  color: #222;
+  font-family: -apple-system, 'Montserrat', 'Noto Sans TC', BlinkMacSystemFont,
+  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: var(--mainDarkBlue);
+}
+
+a:hover {
+  color: #fec503;
+}
+
+.text-primary {
+  color: #fec503 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mainDark);
+  font-weight: 700;
+}
+
+/* 當'選取'時，反白 */
+::-moz-selection {
+  background: #fec503;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fec503;
+  text-shadow: none;
+}

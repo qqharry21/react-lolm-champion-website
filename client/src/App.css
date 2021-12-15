@@ -1,0 +1,494 @@
+/** @format */
+:root {
+  --mainDark: #343a40;
+  --mainDarker: #212529;
+  --mainGrey: #b3b3b3;
+  --mainLightGrey: #dcdcdc;
+  --mainDarkGrey: #666;
+  --mainWhite: #fff;
+  --mainBlue: #6997c2;
+  --mainLightBlue: #56bdec;
+  --mainDarkBlue: #11314e;
+  --mainYellow: #fec503;
+}
+
+/* iPad (min-width:768px) */
+@media (min-width: 768px) {
+  .skillBar {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* iPhone6s (width:375px) */
+/* 當畫面小於376px，css吃max-width的參數 ; 反之，當畫面大於376px則吃min-width的參數 */
+@media screen and (max-width: 376px) {
+  .headerName,
+  .homeTitle {
+    font-size: 21vw; /*21% window view大小*/
+  }
+
+  .headerImg {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .equipmentSlide {
+    transform: scale(0.8);
+  }
+
+  .slick-list {
+    margin: 50px !important;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .championList .championContainer {
+    flex: none;
+  }
+
+  .headerName,
+  .homeTitle {
+    font-size: 8vw;
+  }
+
+  .headerImg {
+    width: 400px;
+  }
+
+  .equipmentSlide {
+    transform: scale(0.6);
+  }
+}
+
+/**************************************** Home ****************************************/
+/* homePage */
+.homePage {
+  height: 845px;
+  text-align: center;
+}
+
+/* homeTitle */
+.homeTitle {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  text-shadow: 2px 2px 8px var(--mainDarker);
+  transform: translate(-50%, -50%);
+}
+
+.homeBackGround {
+  height: 845px;
+  background-image: url("https://www.xtrafondos.com/wallpapers/yasuo-y-lux-de-league-of-legends-wild-rift-6494.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--mainWhite);
+}
+
+/**************************************** PageNotFound ****************************************/
+/* notFoundChange */
+.notFoundPage {
+  position: relative;
+  height: 570px;
+  text-align: center;
+}
+
+/* pageNotFound h1 h2 */
+.notFoundPage h2,
+.notFoundPage p {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/**************************************** About ****************************************/
+
+.aboutPage {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem auto;
+  max-width: 1170px;
+  width: 90vw;
+  gap: 2rem;
+}
+
+.aboutPage h1,
+.aboutPage button {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/**************************************** Navbar ****************************************/
+
+/* App Logo */
+.App-logo {
+  width: 45px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-logo g {
+  fill: var(--mainBlue);
+}
+
+.App-logo path {
+  animation: orbit 1s infinite linear;
+
+  stroke: var(--mainLightBlue);
+  stroke-dasharray: 35px 15px;
+}
+
+@keyframes orbit {
+  to {
+    stroke-dashoffset: 50px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**************************************** Champion ****************************************/
+
+/* championList */
+.championList {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem auto;
+  max-width: 1170px;
+  width: 90vw;
+  gap: 2rem;
+}
+
+/* championContainer */
+.championContainer {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: var(--mainDarkGrey);
+}
+
+.championContainer:hover {
+  background-color: var(--mainDarkBlue);
+  cursor: pointer;
+}
+
+/* champion including name and eng_name*/
+.champion {
+  position: relative;
+  top: 15px;
+  max-width: 200px;
+}
+
+/* championImg */
+.championImg {
+  width: 200px;
+  transition: transform 0.2s ease-out;
+}
+
+.championContainer:hover .championImg,
+.championContainer:focus .championImg {
+  transform: scale(1.1);
+}
+
+/* championName */
+.championName {
+  margin-bottom: -0.15rem;
+  width: 100%;
+  color: var(--mainWhite);
+  font-size: 2.2rem;
+  transition: transform 0.4s ease-out;
+}
+
+.championContainer:hover .championName {
+  transform: translateX(10%);
+}
+
+/* championEngName */
+.championEngName {
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  transition: transform 0.4s ease-out;
+}
+
+.championContainer:hover .championEngName {
+  transform: translateX(10%);
+}
+
+/* championType */
+.championType {
+  border: none;
+  background-color: var(--mainDarkGrey);
+}
+
+.championContainer:hover .championType {
+  background-color: var(--mainDarkBlue);
+}
+
+hr {
+  border-top: 1px solid var(--mainLightGrey);
+}
+
+.championType .championTypeText {
+  color: var(--mainLightGrey);
+  text-shadow: 2px 2px 8px var(--mainDark);
+  font-size: 1.3rem;
+}
+
+/**************************************** Footer ****************************************/
+
+.main-footer {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.main-footer span.copyright {
+  color: var(--var(--mainDarkGrey));
+  text-transform: none;
+  font-size: 90%;
+  line-height: 40px;
+}
+
+.main-footer ul.quicklinks {
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: 90%;
+  line-height: 40px;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  outline: 0;
+  border-radius: 100%;
+  background-color: var(--mainGrey);
+  color: var(--mainDark);
+  font-size: 20px;
+  line-height: 38px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+  background-color: var(--mainYellow);
+  color: var(--mainWhite);
+}
+
+li.list-inline-item {
+  margin-right: 1.5rem;
+  vertical-align: middle;
+}
+
+li.list-inline-item:not(:last-child) {
+  margin-right: 1.5rem;
+  vertical-align: middle;
+}
+
+/**************************************** ChampionDetail ****************************************/
+.detailContainer {
+  position: relative;
+}
+
+/* HeaderBackGround */
+.headerBackGround {
+  margin-bottom: 250px;
+  /* margin-bottom: 180px; */
+  background-image: url("https://cdn1.dotesports.com/wp-content/uploads/2019/10/11123108/Summoners-Rift.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--mainWhite);
+}
+
+.headerName {
+  text-shadow: 2px 2px 8px var(--mainDarker);
+}
+
+.headerNameEng {
+  text-shadow: 2px 2px 8px var(--mainDarker);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.headerImgContainer {
+  max-height: 200vh;
+}
+
+.headerImg {
+  position: relative;
+  top: 120px;
+  border-radius: 50%;
+}
+
+/* Type */
+.typeCol {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.typeContainer {
+  position: relative;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--mainDarkBlue);
+  text-align: center;
+}
+
+.typeContainer .typeImg {
+  position: relative;
+  top: 47.8px;
+}
+
+.typeContainer .typeImg img {
+  position: relative;
+  width: 80px; /* control the img size */
+}
+
+.typeContainer .typeText {
+  position: relative;
+  top: 47.8px; /* control the img position */
+  color: var(--mainDarkBlue);
+  text-shadow: -1px 0 var(--mainLightGrey), 0 1px var(--mainLightGrey),
+    1px 0 var(--mainLightGrey), 0 -1px var(--mainLightGrey);
+  font-size: 50px;
+}
+
+.storyContainer {
+  padding-bottom: inherit;
+}
+
+.storyContainer .storyText {
+  padding: 0;
+  color: var(--mainDarkGrey);
+  text-shadow: -0.5px -0.5px var(--mainWhite), 0.5px 0.5px var(--mainGrey);
+  font-style: oblique;
+  font-size: 1.2rem;
+}
+
+/* .story-container .story-text::first-letter {
+  /* padding-right: 2px;
+  color: var(--mainDarkGrey);
+  font-weight: bold; /*首字粗體
+  /* font-size: 1.3rem; 表示首字要放大的比率大小
+} */
+
+.skillContainer {
+  position: relative;
+  top: -120px;
+}
+
+.skillBar {
+  /* col-lg-1-5 */
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 1px;
+}
+
+.skillImg {
+  margin-bottom: 10px;
+}
+
+.skillText {
+  color: var(--mainDarkGrey);
+}
+
+/* Rune && Spell */
+.runeSpellContainer {
+  position: relative;
+  top: -130px;
+}
+
+.runeContainer {
+  position: relative;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--mainLightGrey);
+  text-align: center;
+}
+
+.spellContainer {
+  position: relative;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--mainDarker);
+  text-align: center;
+}
+
+/* clothes */
+.clothesContainer {
+  position: relative;
+  text-align: center;
+}
+
+.clothesTitle {
+  font-size: 2.5rem;
+}
+
+/* equipment */
+.equipContainer {
+  margin: 5rem auto;
+  width: 100%;
+}
+
+.equipmentSlide {
+  opacity: 0.2;
+  transition: transform 600ms;
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.next {
+  top: 50%;
+  right: 0;
+}
+
+.prev {
+  top: 50%;
+  left: 0;
+}
+
+.slick-slide img {
+  display: inline;
+}
+
+.typeTooltip .tooltip-inner {
+  color: var(--mainLightGrey);
+  text-align: start;
+  font-size: 1rem;
+}
+
+.typeTooltip .tooltip-arrow {
+  position: relative;
+  top: -50px;
+}
